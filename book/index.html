@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="book.css" />
+    <script src="book.js"></script>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="search" name="search" placeholder="输入书名...">
+    </form>
+    <button onclick="change()">点击搜索</button>
+    <div id="description">
+        <p>绿色：有结果；红色：无结果；蓝色：未知需点击查看。</p>
+    </div>
+    <table>
+        <caption>书籍信息</caption>
+        <tr>
+            <td> <a id="douban" target="_blank" href="https://book.douban.com">豆瓣</a> </td>
+            <td> <a id="goodreads" target="_blank" href="https://www.goodreads.com">Goodreads</a> </td>
+            <td> <a id="dangdang" target="_blank" href="http://www.dangdang.com">当当</a> </td>
+            <td> <a id="jd" target="_blank" href="https://www.jd.com">京东</a> </td>
+            <td> <a id="amazon" target="_blank" href="https://www.amazon.com">Amazon</a> </td>
+        </tr>
+        <tr>
+            <td> <a id="superlib" target="_blank" href="http://book.ucdrs.superlib.net">图书馆</a> </td>
+            <td> <a id="google" target="_blank" href="https://www.google.com/ncr">Google</a> </td>
+            <td> <a id="yandex" target="_blank" href="https://yandex.com/">Yandex</a> </td>
+            <td> <a id="baidu" target="_blank" href="https://www.baidu.com/">百度</a> </td>
+        </tr>
+    </table>
+    <table>
+        <caption>直接下载</caption>
+        <tr>
+            <td> <a id="libgen" target="_blank" href="https://libgen.is">LibGen</a> </td>
+            <td> <a id="zlibrary" target="_blank" href="https://b-ok.cc">ZLibrary</a> </td>
+            <td> <a id="itpanda" target="_blank" href="https://www.itpanda.net/">IT熊猫</a> </td>
+        </tr>
+    </table>
+    <table>
+        <caption>网盘搜索</caption>
+        <tr> 
+            <td> <a id="jiumo" target="_blank" href="https://www.jiumodiary.com">鸠摩</a> </td>
+            <td> <a id="qzhou" target="_blank" href="https://www.qzhou.com.cn">轻舟</a> </td> 
+            <td> <a id="dashengpan" target="_blank" href="https://www.dashengpan.com">大圣盘</a> </td> 
+        </tr>
+    </table>
+    <table>
+        <caption>限制下载</caption>
+        <tr>
+            <td> <a id="epubee" target="_blank" href="http://cn.epubee.com/books/">ePUBee</a> </td>
+        </tr>
+    </table>
+    <table>
+        <caption>类似站点</caption>
+        <tr>
+            <td> <a id="thefuture" target="_blank" href="https://bks.thefuture.top/">thefuture</a> </td> <!-- https://www.52pojie.cn/forum.php?mod=viewthread&tid=1169061 --> 
+            <td> <a id="chongbuluo" target="_blank" href="https://ebook.chongbuluo.com/">虫部落</a> </td>
+        </tr>
+    </table>
+</body>
+
+<footer>
+</footer>
+</html>

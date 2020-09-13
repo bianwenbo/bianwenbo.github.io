@@ -1,0 +1,56 @@
+body {
+    width: 80ch;
+    margin: 0 auto;
+    text-align: center
+}
+
+input {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+button {
+    font-size: 1em;
+    background-color: Gainsboro;
+    border: none;
+    padding: 15px 30px;
+}
+
+#description {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+}
+
+table, tr, td {
+    border: 1px solid lightgrey;
+    padding: 5px;
+}
+
+caption {
+    line-height: 1.5em;
+}
+
+td {
+    width: 20%;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* macOS dark mode 
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background: black;
+    }
+}
+*/
