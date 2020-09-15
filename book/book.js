@@ -66,14 +66,30 @@ function change() {
     itpanda.style.color="green";
     itpanda.href = "https://www.itpanda.net/book/search?query=" + searchValue;
 
+    const pdfbook = document.getElementById("pdfbook");
+    pdfbook.style.color="green";
+    pdfbook.href = "http://www.pdfbook.cn/?s=" + searchValue;
+
+    const shuge = document.getElementById("shuge");
+    shuge.style.color="green";
+    shuge.href = "https://new.shuge.org/?s=" + searchValue;
+
+    const zhishikoo = document.getElementById("zhishikoo");
+    zhishikoo.style.color="green";
+    zhishikoo.href = "https://book.zhishikoo.com/?s=" + searchValue;
+
+    const aibooks = document.getElementById("aibooks");
+    aibooks.style.color="green";
+    aibooks.href = "https://www.aibooks.cc/search/" + searchValue;
+
     // Online drive
     const qzhou = document.getElementById("qzhou");
     qzhou.style.color="green";
     qzhou.href = "https://www.qzhou.com.cn/search?keyword=" + encodeURIComponent(searchValue);
 
-    const dashengpan = document.getElementById("dashengpan");
-    dashengpan.style.color="green";
-    dashengpan.href = "https://www.dashengpan.com/search?keyword=" + encodeURIComponent(searchValue);
+    const toplinks = document.getElementById("toplinks");
+    toplinks.style.color="green";
+    toplinks.href = "http://www.toplinks.cc/s/?keyword=" + encodeURIComponent(searchValue);
 
     // Download limited
     const epubee = document.getElementById("epubee");
@@ -85,6 +101,28 @@ function change() {
     const thefuture = document.getElementById("thefuture");
     thefuture.style.color="green";
     thefuture.href = "https://bks.thefuture.top/result.php?q=" + searchValue;
+
+    // Article
+    const idata = document.getElementById("idata");
+    idata.style.color="green";
+    idata.href = "https://search.cn-ki.net/search?db=CFLS&keyword=" + searchValue;
+
+    // Word
+    const wikipediazh = document.getElementById("wikipediazh");
+    wikipediazh.style.color="green";
+    wikipediazh.href = "https://zh.wikipedia.org/w/index.php?search=" + searchValue;
+
+    const wikipedia = document.getElementById("wikipedia");
+    wikipedia.style.color="green";
+    wikipedia.href = "https://en.wikipedia.org/w/index.php?search=" + searchValue;
+
+    const zdict = document.getElementById("zdict");
+    zdict.style.color="green";
+    zdict.href = "https://www.zdic.net/hans/" + searchValue;
+
+    const ctext = document.getElementById("ctext");
+    ctext.style.color="green";
+    ctext.href = "https://ctext.org/searchbooks.pl?if=gb&remap=gb&searchu=" + searchValue;
 
 }
 
