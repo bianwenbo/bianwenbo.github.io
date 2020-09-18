@@ -56,7 +56,7 @@ function change() {
     // Download directly
     const libgen = document.getElementById("libgen");
     libgen.style.color="green";
-    libgen.href = "https://libgen.is/search.php?req=" + searchValue;
+    libgen.href = "https://libgen.lc/search.php?req=" + searchValue;
 
     const zlibrary = document.getElementById("zlibrary");
     zlibrary.style.color="green";
