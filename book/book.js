@@ -56,7 +56,7 @@ function change() {
     // Download directly
     const libgen = document.getElementById("libgen");
     libgen.style.color="green";
-    libgen.href = "https://libgen.lc/search.php?req=" + searchValue;
+    libgen.href = "http://gen.lib.rus.ec/search.php?req=" + searchValue;
 
     const zlibrary = document.getElementById("zlibrary");
     zlibrary.style.color="green";
@@ -82,10 +82,14 @@ function change() {
     aibooks.style.color="green";
     aibooks.href = "https://www.aibooks.cc/search/" + searchValue;
 
+    const sxpdf = document.getElementById("sxpdf");
+    sxpdf.style.color="green";
+    sxpdf.href = "https://www.sxpdf.com/?s=" + searchValue;
+
     // Online drive
-    const qzhou = document.getElementById("qzhou");
-    qzhou.style.color="green";
-    qzhou.href = "https://www.qzhou.com.cn/search?keyword=" + encodeURIComponent(searchValue);
+    const dalipan = document.getElementById("dalipan");
+    dalipan.style.color="green";
+    dalipan.href = "https://www.dalipan.com/search?keyword=" + encodeURIComponent(searchValue);
 
     const toplinks = document.getElementById("toplinks");
     toplinks.style.color="green";
