@@ -1,48 +1,66 @@
 body {
-    width: 80ch;
-    margin: 0 auto;
-    text-align: center
+    margin: 2% 10%;
+    text-align: left;
 }
 
-input {
+form {
+    border: 1px solid lightgrey;
+}
+
+form, #list {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+}
+
+input#search {
+    flex: 1 1 150px;
     font-size: 1.5em;
     padding: 10px;
-}
-
-button {
-    font-size: 1em;
-    background-color: Gainsboro;
     border: none;
-    padding: 15px 30px;
 }
 
-#description {
-    display: none;
+input#button {
+    flex: 0 1 100px;
+    font-size: 1.5em;
+    background: white;
+    border: none;
+    color: grey;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 1em;
-}
-
-table, tr, td {
-    border: 1px solid lightgrey;
+#list a {
+    /*  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+    //  If we don't want the items to stretch: */
+    flex: 0 1 100px;
+    /*  If we do want the items to stretch:
+    flex: 1 1 300px; 
+    
+    //   etc. */
+    margin: 5px;
     padding: 5px;
-}
-
-caption {
-    line-height: 1.5em;
-}
-
-td {
+    background: whitesmoke;
+    font-size: 1rem;
+    text-align: center;
     width: 20%;
+}
+
+h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-bottom: 1.5px double whitesmoke;
+    color: darkslategrey;
+}
+
+h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1.5px dashed whitesmoke;
+    color: slategrey;
 }
 
 a {
     text-decoration: none;
-    color: blue;
+    color: royalblue;
 }
 
 

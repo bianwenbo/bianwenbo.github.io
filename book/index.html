@@ -4,86 +4,68 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <link rel="stylesheet" type="text/css" href="book.css" />
     <script src="book.js"></script>
+    <base target="_blank">
 </head>
 
 <body>
-    <form>
-        <input type="text" id="search" name="search" placeholder="输入书名...">
+    <form target="keepContent">
+        <input id="search" type="text" name="search" placeholder="输入书名，回车搜索..." />
+        <input id="button" type="submit" value="搜索" onclick="change()" />
     </form>
-    <button onclick="change()">点击搜索</button>
-    <div id="description">
-        <p>绿色：有结果；红色：无结果；蓝色：未知需点击查看。</p>
+    <iframe name="keepContent" style="display:none;"></iframe>
+
+    <h3>书籍信息</h3>
+    <div id="list">
+        <a id="douban" href="https://book.douban.com">豆瓣</a>
+        <a id="goodreads" href="https://www.goodreads.com">Goodreads</a>
+        <a id="dangdang" href="http://www.dangdang.com">当当</a>
+        <a id="jd" href="https://www.jd.com">京东</a>
+        <a id="amazon" href="https://www.amazon.com">Amazon</a>
+        <a id="superlib" href="http://book.ucdrs.superlib.net">图书馆</a>
+        <a id="google" href="https://www.google.com/ncr">Google</a>
+        <a id="yandex" href="https://yandex.com/">Yandex</a>
+        <a id="baidu" href="https://www.baidu.com/">百度</a>
     </div>
-    <table>
-        <caption>书籍信息</caption>
-        <tr>
-            <td> <a id="douban" target="_blank" href="https://book.douban.com">豆瓣</a> </td>
-            <td> <a id="goodreads" target="_blank" href="https://www.goodreads.com">Goodreads</a> </td>
-            <td> <a id="dangdang" target="_blank" href="http://www.dangdang.com">当当</a> </td>
-            <td> <a id="jd" target="_blank" href="https://www.jd.com">京东</a> </td>
-            <td> <a id="amazon" target="_blank" href="https://www.amazon.com">Amazon</a> </td>
-        </tr>
-        <tr>
-            <td> <a id="superlib" target="_blank" href="http://book.ucdrs.superlib.net">图书馆</a> </td>
-            <td> <a id="google" target="_blank" href="https://www.google.com/ncr">Google</a> </td>
-            <td> <a id="yandex" target="_blank" href="https://yandex.com/">Yandex</a> </td>
-            <td> <a id="baidu" target="_blank" href="https://www.baidu.com/">百度</a> </td>
-        </tr>
-    </table>
-    <table>
-        <caption>直接下载</caption>
-        <tr>
-            <td> <a id="libgen" target="_blank" href="http://gen.lib.rus.ec/">LibGen</a> </td>
-            <td> <a id="zlibrary" target="_blank" href="https://b-ok.cc">ZLibrary</a> </td>
-            <td> <a id="itpanda" target="_blank" href="https://www.itpanda.net/">IT熊猫</a> </td>
-            <td> <a id="pdfbook" target="_blank" href="http://www.pdfbook.cn/">云海</a> </td>
-            <td> <a id="shuge" target="_blank" href="https://new.shuge.org/">书格</a> </td>
-        </tr>
-        <tr>
-            <td> <a id="zhishikoo" target="_blank" href="https://book.zhishikoo.com/">知识库</a> </td>
-            <td> <a id="aibooks" target="_blank" href="https://www.aibooks.cc">AiBooks</a> </td>
-            <td> <a id="sxpdf" target="_blank" href="https://www.sxpdf.com/">书行天下</a> </td>
-        </tr>
-    </table>
-    <table>
-        <caption>网盘搜索</caption>
-        <tr> 
-            <td> <a id="jiumo" target="_blank" href="https://www.jiumodiary.com">鸠摩</a> </td>
-            <td> <a id="dalipan" target="_blank" href="https://www.dalipan.com/">大力盘</a> </td> 
-            <td> <a id="toplinks" target="_blank" href="http://www.toplinks.cc">淘链客</a> </td> 
-        </tr>
-    </table>
-    <table>
-        <caption>限制下载</caption>
-        <tr>
-            <td> <a id="epubee" target="_blank" href="http://cn.epubee.com/books/">ePUBee</a> </td>
-        </tr>
-    </table>
-    <table>
-        <caption>类似站点</caption>
-        <tr>
-            <td> <a id="thefuture" target="_blank" href="https://bks.thefuture.top/">thefuture</a> </td> <!-- https://www.52pojie.cn/forum.php?mod=viewthread&tid=1169061 --> 
-            <td> <a id="chongbuluo" target="_blank" href="https://ebook.chongbuluo.com/">虫部落</a> </td>
-            <td> <a id="shuhai" target="_blank" href="https://shuhai.mobi/">书海</a> </td>
-        </tr>
-    </table>
+    <h3>直接下载</h3>
+    <div id="list">
+        <a id="libgen" href="http://gen.lib.rus.ec/">LibGen</a> 
+        <a id="zlibrary" href="https://b-ok.cc">ZLibrary</a> 
+        <a id="itpanda" href="https://www.itpanda.net/">IT熊猫</a> 
+        <a id="pdfbook" href="http://www.pdfbook.cn/">云海</a> 
+        <a id="shuge" href="https://new.shuge.org/">书格</a> 
+        <a id="zhishikoo" href="https://book.zhishikoo.com/">知识库</a> 
+        <a id="aibooks" href="https://www.aibooks.cc">AiBooks</a> 
+        <a id="sxpdf" href="https://www.sxpdf.com/">书行天下</a> 
+    </div>
+    <h3>网盘搜索</h3>
+    <div id="list">
+        <a id="jiumo" href="https://www.jiumodiary.com">鸠摩</a> 
+        <a id="dalipan" href="https://www.dalipan.com/">大力盘</a> 
+        <a id="toplinks" href="http://www.toplinks.cc">淘链客</a> 
+    </div>
+    <h3>在线阅读</h3>
+    <div id="list">
+        <a id="epubee" href="http://cn.epubee.com/books/">ePUBee</a>
+    </div>
+    <h3>类似站点</h3>
+    <div id="list">
+        <a id="thefuture" href="https://bks.thefuture.top/">thefuture</a>  <!-- https://www.52pojie.cn/forum.php?mod=viewthread&tid=1169061 -->
+        <a id="chongbuluo" href="https://ebook.chongbuluo.com/">虫部落</a> 
+        <a id="shuhai" href="https://shuhai.mobi/">书海</a> 
+    </div>
     <h2>工具</h2>
-    <table>
-        <caption>论文</caption>
-        <tr>
-            <td> <a id="idata" target="_blank" href="https://www.cn-ki.net/">iData</a> </td>
-        </tr>
-    </table>
-    <table>
-        <caption>文辞</caption>
-        <tr>
-            <td> <a id="wikipediazh" target="_blank" href="https://zh.wikipedia.org">维基百科</a> </td>
-            <td> <a id="wikipedia" target="_blank" href="https://en.wikipedia.org">Wikipedia</a> </td>
-            <td> <a id="zdict" target="_blank" href="https://www.zdic.net/">汉典</a> </td>
-            <td> <a id="sou-yun" target="_blank" href="https://sou-yun.cn/">搜韵</a> </td>
-            <td> <a id="ctext" target="_blank" href="https://ctext.org/zhs">中国哲学书</a> </td>
-        </tr>
-    </table>
+    <h3>文辞</h3>
+    <div id="list">
+        <a id="wikipediazh" href="https://zh.wikipedia.org">维基百科</a> 
+        <a id="wikipedia" href="https://en.wikipedia.org">Wikipedia</a> 
+        <a id="zdict" href="https://www.zdic.net/">汉典</a> 
+        <a id="sou-yun" href="https://sou-yun.cn/">搜韵</a> 
+        <a id="ctext" href="https://ctext.org/zhs">中国哲学书</a> 
+    </div>
+    <h3>论文</h3>
+    <div id="list">
+        <a id="idata" href="https://www.cn-ki.net/">iData</a>
+    </div>
 </body>
 
 <footer>
