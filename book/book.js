@@ -6,6 +6,9 @@ function change() {
 //        elements[i].removeAttribute("href");
 //    }
 
+    const searchButton = document.getElementById("button");
+    searchButton.style.color="grey";
+
     const searchId = document.getElementById("search");
     const searchValue = searchId.value.trim();
 
@@ -43,14 +46,14 @@ function change() {
     for (x in idUrl)
     {
         let id = document.getElementById(x);
-        id.style.background="lightcyan";
+        id.style.color="dodgerblue";
         id.href = idUrl[x] + searchValue;
     }
 
     // Info
     idUrl["jd"] = "https://search.jd.com/Search?keyword=";
     const jd = document.getElementById("jd");
-    jd.style.background="lightcyan";
+    jd.style.color="dodgerblue";
     jd.href = idUrl["jd"] + "\"" + searchValue + "\"";
 
     // Download directly
@@ -58,18 +61,18 @@ function change() {
     // Online drive
     idUrl["dalipan"] = "https://www.dalipan.com/search?keyword=";
     const dalipan = document.getElementById("dalipan");
-    dalipan.style.background="lightcyan";
+    dalipan.style.color="dodgerblue";
     dalipan.href = idUrl["dalipan"] + encodeURIComponent(searchValue);
 
     idUrl["toplinks"] = "http://www.toplinks.cc/s/?keyword=";
     const toplinks = document.getElementById("toplinks");
-    toplinks.style.background="lightcyan";
+    toplinks.style.color="dodgerblue";
     toplinks.href = idUrl["toplinks"] + encodeURIComponent(searchValue);
 
     // Download limited
     idUrl["epubee"] = "http://cn.epubee.com/books/?s=";
     const epubee = document.getElementById("epubee");
-    epubee.style.background="lightcyan";
+    epubee.style.color="dodgerblue";
     const epubeeValue = btoa(encodeURIComponent(searchValue.slice(-1)) + searchValue.length + encodeURIComponent("$" + searchValue.slice(0, searchValue.length - 1) + "#"));
     epubee.href = idUrl["epubee"] + epubeeValue;
 

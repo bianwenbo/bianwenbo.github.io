@@ -1,3 +1,9 @@
+/* CSS Color: https://www.rapidtables.com/web/css/css-color.html */
+
+.vewport {
+    width:100%;
+}
+
 body {
     margin: 2% 10%;
     text-align: left;
@@ -5,6 +11,16 @@ body {
 
 form {
     border: 1px solid lightgrey;
+}
+
+form:focus-within {
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  border: 1px solid transparent;
+}
+
+input:focus {
+    outline: none;
 }
 
 form, #list {
@@ -15,17 +31,25 @@ form, #list {
 
 input#search {
     flex: 1 1 150px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     padding: 10px;
     border: none;
 }
 
 input#button {
     flex: 0 1 100px;
-    font-size: 1.5em;
-    background: white;
+    font-size: 1.5rem;
+    background: whitesmoke;
     border: none;
     color: grey;
+}
+
+@media (max-width: 500px) {
+    input#button {
+        color: lightseagreen;
+        flex: 1 1 auto;
+        border: 5px solid white;
+    }
 }
 
 #list a {
@@ -45,22 +69,22 @@ input#button {
 }
 
 h2 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     border-bottom: 1.5px double whitesmoke;
     color: darkslategrey;
 }
 
 h3 {
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
     border-bottom: 1.5px dashed whitesmoke;
     color: slategrey;
 }
 
 a {
     text-decoration: none;
-    color: royalblue;
+    color: lightseagreen;
 }
 
 
