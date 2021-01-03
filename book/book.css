@@ -5,7 +5,7 @@
 }
 
 body {
-    margin: 2% 10%;
+    margin: 2% 5%;
     text-align: left;
 }
 
@@ -30,27 +30,21 @@ form, #list {
 }
 
 input#search {
-    flex: 1 1 150px;
+    flex: 1 0 85%;
     font-size: 1.5rem;
-    padding: 10px;
+    padding: 1%;
     border: none;
 }
 
 input#button {
-    flex: 0 1 100px;
+    flex: 1 0 13%;
     font-size: 1.5rem;
+    padding: 1%;
     background: whitesmoke;
     border: none;
-    color: grey;
+    color: lightseagreen;
 }
 
-@media (max-width: 500px) {
-    input#button {
-        color: lightseagreen;
-        flex: 1 1 auto;
-        border: 5px solid white;
-    }
-}
 
 #list a {
     /*  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
